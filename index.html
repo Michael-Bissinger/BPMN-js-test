@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<!-- required viewer styles -->
+<link rel="stylesheet" href="https://unpkg.com/bpmn-js@9.4.1/dist/assets/bpmn-js.css" />
+
+<script src="https://unpkg.com/bpmn-js@9.4.1/dist/bpmn-viewer.development.js"></script>
+
+<!-- required modeler styles -->
+<link rel="stylesheet" href="https://unpkg.com/bpmn-js@9.4.1/dist/assets/diagram-js.css" />
+<link rel="stylesheet" href="https://unpkg.com/bpmn-js@9.4.1/dist/assets/bpmn-js.css" />
+<link rel="stylesheet" href="https://unpkg.com/bpmn-js@9.4.1/dist/assets/bpmn-font/css/bpmn.css" />
+
+<script src="https://unpkg.com/bpmn-js@9.4.1/dist/bpmn-modeler.development.js"></script>
+
+<script>
+
+var bpmnJS = new BpmnJS({
+  container: '#canvas'
+});
+
+try {
+
+  await bpmnJS.importXML(someDiagram);
+
+  console.log('success!');
+  viewer.get('canvas').zoom('fit-viewport');
+} catch (err) {
+
+  console.error('something went wrong:', err);
+  
+}
+
+</script>
+
+</head>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
